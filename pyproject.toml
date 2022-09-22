@@ -1,10 +1,14 @@
 [tool.poetry]
 name = "tjutils"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python Utilities for TJ P"
 authors = ["TJ P <mail@tjpalanca.com>"]
 license = "MIT"
 readme = "README.md"
+
+[tool.poetry.urls]
+"Documentation" = "https://tjpalanca.com/"
+"Bug Tracker" = "https://github.com/tjpalanca/tjutils-py/issues"
 
 [tool.poetry.dependencies]
 python = "^3.11"
