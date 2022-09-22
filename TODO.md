@@ -1,0 +1,9 @@
+- [x] Create simple project that syncs pyproject.toml and settings.ini
+- [ ] Record all the steps to bootstrap a poetry setup
+    - Create the project 
+    - Initialize git
+    - Install basic tools: mypy, black, flake8, bandit
+- [ ] Record all the steps to add nbdev to it
+    - Install dev dependencies: nbdev, ipykernel
+    - Create directory `notebooks`
+    - nbdev_create_config

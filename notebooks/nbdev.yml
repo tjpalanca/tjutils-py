@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "tjutils-py"
+  site-url: "https://tjpalanca.github.io/tjutils-py"
+  description: "Python Utilities for TJ P"
+  repo-branch: master
+  repo-url: "https://github.com/tjpalanca/tjutils-py"
