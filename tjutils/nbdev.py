@@ -7,7 +7,13 @@ __all__ = ['export', 'version']
 import tomllib
 from fastcore.xtras import repo_details
 from nbdev import nbdev_export
-from nbdev.config import nbdev_create_config, read_config_file
+from nbdev.config import (
+    _apply_defaults,
+    read_config_file,
+    Config,
+    _cfg2txt,
+    _nbdev_cfg_sections,
+)
 from pathlib import Path
 from git import Repo
 from urllib.parse import urlparse
@@ -18,8 +24,9 @@ def _get_classifier_value(classifiers, name):
     classifier = [c for c in classifiers if c.startswith(f"{name} :: ")]
     if len(classifier) == 1:
         return classifier[0].split(" :: ")[1]
-    else: 
+    else:
         return None
+
 
 def export():
     "Syncs poetry config, nbdev's settings.ini, and does an export to the module."
@@ -37,69 +44,75 @@ def export():
     git_user, git_repo = repo_details(Repo(".").remotes["origin"].url)
 
     # Gather as much config from data sources
-    from_pp = ""#"\n    # Set from pyproject.toml"
-    from_gt = ""#"\n    # Set from git repository"
-    from_df = ""#"\n    # Default"
     authors = ", ".join(aut.split("<")[0].strip() for aut in poetry["authors"])
     doc_url = urlparse(poetry.get("documentation", f"https://tjpalanca.com/{git_repo}"))
     doc_host = f"{doc_url.scheme}://{doc_url.netloc}"
     doc_baseurl = doc_url.path
-    if (classifiers := poetry.get("classifiers")):
-        if (status := _get_classifier_value(classifiers, "Development Status")):
+    if classifiers := poetry.get("classifiers"):
+        if status := _get_classifier_value(classifiers, "Development Status"):
             status = status.split(" - ")[0]
         audience = _get_classifier_value(classifiers, "Intended Audience")
         language = _get_classifier_value(classifiers, "Natural Language")
-    inferred_config = {
-        "repo": git_repo + from_gt,
-        "branch": git_branch + from_gt,
-        "user": git_user + from_gt,
-        "author": authors + from_pp,
+    inferred = {
+        "repo": git_repo,
+        "branch": git_branch,
+        "user": git_user,
+        "author": authors,
         "author_email": ", ".join(
             aut.split("<")[1].replace(">", "") for aut in poetry["authors"]
-        )
-        + from_pp,
-        "description": poetry["description"] + from_pp,
-        "path": nbdev.get("path", "." + from_df),
-        "cfg_name": nbdev.get("cfg_name", "settings.ini" + from_df),
-        "lib_name": poetry["name"] + from_pp,
-        "git_url": git_url + from_pp,
-        "custom_sidebar": nbdev.get("sidebar", "False" + from_df),
-        "nbs_path": nbdev.get("nbs_path", "notebooks" + from_df),
-        "lib_path": poetry["name"] + from_pp,
-        "doc_path": nbdev.get("doc_path", "_docs") + from_pp,
-        "tst_flags": nbdev.get("tst_flags", "notest") + from_pp,
-        "version": poetry["version"] + from_pp,
-        "doc_host": nbdev.get("doc_host", doc_host + from_df),
-        "doc_baseurl": nbdev.get("doc_baseurl", doc_baseurl + from_gt),
-        "keywords": poetry.get("keywords", "tjpalanca nbdev" + from_df),
-        "license": poetry["license"] + from_pp,
-        "copyright": f"2022 onwards, {authors}" + from_pp,
-        "status": nbdev.get("status") or status or ("3" + from_df),
-        "audience": nbdev.get("audience") or audience or ("Developers" + from_df),
-        "min_python": poetry["dependencies"]["python"].replace("^", "") + from_pp,
-        "language": nbdev.get("language") or language or ("English" + from_df),
-        "recursive": nbdev.get("recursive", "False" + from_df),
-        "black_formatting": nbdev.get("black_formatting", "True" + from_df),
-        "readme_nb": nbdev.get("readme_nb", "README.ipynb" + from_df),
-        "title": poetry["name"] + from_pp,
+        ),
+        "description": poetry["description"],
+        "path": nbdev.get("path", "."),
+        "cfg_name": nbdev.get("cfg_name", "settings.ini"),
+        "lib_name": poetry["name"],
+        "git_url": git_url,
+        "custom_sidebar": nbdev.get("sidebar", "False"),
+        "nbs_path": nbdev.get("nbs_path", "notebooks"),
+        "lib_path": poetry["name"],
+        "doc_path": nbdev.get("doc_path", "_docs"),
+        "tst_flags": nbdev.get("tst_flags", "notest"),
+        "version": poetry["version"],
+        "doc_host": nbdev.get("doc_host", doc_host),
+        "doc_baseurl": nbdev.get("doc_baseurl", doc_baseurl),
+        "keywords": poetry.get("keywords", "tjpalanca nbdev"),
+        "license": poetry["license"],
+        "copyright": f"2022 onwards, {authors}",
+        "status": nbdev.get("status") or status or ("3"),
+        "audience": nbdev.get("audience") or audience or ("Developers"),
+        "min_python": poetry["dependencies"]["python"].replace("^", ""),
+        "language": nbdev.get("language") or language or ("English"),
+        "recursive": nbdev.get("recursive", "False"),
+        "black_formatting": nbdev.get("black_formatting", "True"),
+        "readme_nb": nbdev.get("readme_nb", "README.ipynb"),
+        "title": poetry["name"],
         "allowed_metadata_keys": nbdev.get("allowed_metadata_keys"),
         "allowed_cell_metadata_keys": nbdev.get("allowed_cell_metadata_keys"),
-        "jupyter_hooks": nbdev.get("jupyter_hooks", "True" + from_df),
-        "clean_ids": nbdev.get("clean_ids", "True" + from_df),
-        "clear_all": nbdev.get("clear_all", "False" + from_df),
-        "put_version_in_init": nbdev.get("put_version_in_init", "True" + from_df),
+        "jupyter_hooks": nbdev.get("jupyter_hooks", "True"),
+        "clean_ids": nbdev.get("clean_ids", "True"),
+        "clear_all": nbdev.get("clear_all", "False"),
+        "put_version_in_init": nbdev.get("put_version_in_init", "True"),
     }
 
     # Unify with existing settings.ini
     settings_file = Path("settings.ini")
     if settings_file.is_file():
-        config = dict(read_config_file(settings_file)) | inferred_config
+        config = dict(read_config_file(settings_file)) | inferred
         settings_file.unlink()
     else:
-        config = inferred_config
-
+        config = inferred
     # Recreate the configuration file
-    nbdev_create_config(**config)
+    path = config["path"]
+    cfg_name = config["cfg_name"]
+    req = {
+        k: v
+        for k, v in config.items()
+        if k not in ("path", "cfg_name") and v is not None
+    }
+    cfg = Config(path, cfg_name, req, save=False)
+    cfg = _apply_defaults(cfg, config)
+    cfg.config_file.write_text(
+        _cfg2txt(cfg, "# Autogenerated from pyproject.toml\n", _nbdev_cfg_sections, "")
+    )
 
     # Export noteboooks to module
     nbdev_export(config["nbs_path"])
@@ -108,3 +121,4 @@ def export():
 # %% ../notebooks/01-nbdev.ipynb 3
 def version():
     pass
+
