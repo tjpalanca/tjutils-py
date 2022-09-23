@@ -1,4 +1,5 @@
 - [x] Create simple project that syncs pyproject.toml and settings.ini
+- [ ] Add rest of fields in pyproject.toml
 - [ ] Record all the steps to bootstrap a poetry setup
     - Create the project 
     - Initialize git
