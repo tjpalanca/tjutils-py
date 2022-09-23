@@ -7,6 +7,7 @@ __pycache__/
 .quarto
 .DS_Store
 dist/
+*.bak
 
 # Environment 
 /.env*

@@ -1,18 +1,24 @@
 [tool.poetry]
 name = "tjutils"
-version = "0.1.1"
+version = "0.1.2"
 description = "Python Utilities for TJ P"
 authors = ["TJ P <mail@tjpalanca.com>"]
 license = "MIT"
 readme = "README.md"
-
-[tool.poetry.urls]
-"Documentation" = "https://tjpalanca.com/"
-"Bug Tracker" = "https://github.com/tjpalanca/tjutils-py/issues"
+documentation = "https://tjpalanca.com/tjutils-py"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Topic :: Utilities"
+]
+keywords = [
+    "tjpalanca", 
+    "nbdev",
+    "utilities"
+]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-
+GitPython = "^3.1.27"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^0.971"
