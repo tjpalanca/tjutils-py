@@ -2,6 +2,10 @@
 
 <!-- do not remove -->
 
+## 0.4.4
+
+* Bugfix, `status` and other variables not set
+
 ## 0.4.3
 
 * Custom sidebar and cosmetic fixes
