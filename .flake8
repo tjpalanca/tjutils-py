@@ -1,0 +1,3 @@
+[flake8]
+# Black has a line length of 88
+max-line-length = 88
