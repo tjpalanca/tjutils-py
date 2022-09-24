@@ -2,6 +2,10 @@
 
 <!-- do not remove -->
 
+## 0.6.2
+
+* Include templates dir
+
 ## 0.6.1
 
 * Change to using the local file versions instead of downloading from github
