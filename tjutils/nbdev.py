@@ -150,4 +150,4 @@ def version(rule: str):  # PEP-440 compliant bump rule
 def github_actions():
     "Add GitHub Actions Workflows to deploy documentation to GitHub Pages and Test Package"
     copy_template("nbdev/github_action_doc_deploy.yml", ".github/workflows/doc_deploy.yml")
-    copy_template("nbdev/github_action_pkg_test.yml", ".github/workflows/pkg_test.yml")
+    copy_template("nbdev/github_action_pkg_testing.yml", ".github/workflows/pkg_testing.yml")

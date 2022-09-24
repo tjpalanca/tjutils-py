@@ -2,6 +2,10 @@
 
 <!-- do not remove -->
 
+## 0.4.2
+
+* Back to 3.9 again, not working
+
 ## 0.4.1
 
 * Require back to Python 3.11 but add .python-version file to `github_actions()` in order to satisfy the function.
