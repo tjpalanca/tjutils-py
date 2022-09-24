@@ -2,6 +2,10 @@
 
 <!-- do not remove -->
 
+## 0.6.1
+
+* Change to using the local file versions instead of downloading from github
+
 ## 0.6.0
 
 * Feature: Add ability to import gitignore for nbdev projects

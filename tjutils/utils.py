@@ -4,7 +4,7 @@
 __all__ = ['TEMPLATES_URL', 'copy_template']
 
 # %% ../notebooks/00-utils.ipynb 1
-import requests
+import importlib.resources as pkg_resources
 from pathlib import Path
 
 # %% ../notebooks/00-utils.ipynb 3
@@ -13,11 +13,11 @@ TEMPLATES_URL = (
 )
 
 # %% ../notebooks/00-utils.ipynb 4
-def copy_template(tmp: str, file: str, append: bool = False):
+def copy_template(module, tmp: str, file: str, append: bool = False):
     "Copies a template from the templates directory"
     filepath = Path(file)
     filepath.parent.mkdir(parents=True, exist_ok=True)
-    resp = requests.get(f"{TEMPLATES_URL}/{tmp}")
-    with open(file, "ab" if append else "wb") as f:
-        f.write(resp.content)
+    content = pkg_resources.files(module).joinpath(tmp).read_text()
+    with open(file, "a" if append else "w") as f:
+        f.write(content)
     return None
