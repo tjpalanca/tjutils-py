@@ -6,6 +6,7 @@ authors = ["TJ P <mail@tjpalanca.com>"]
 license = "MIT"
 readme = "README.md"
 documentation = "https://tjpalanca.com/tjutils-py"
+include = ["templates/**"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Topic :: Utilities"

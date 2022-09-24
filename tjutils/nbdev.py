@@ -154,7 +154,7 @@ def version(rule: str):  # PEP-440 compliant bump rule
 # %% ../notebooks/01-nbdev.ipynb 6
 def github_actions():
     "Add GitHub Actions Workflows to deploy documentation to GitHub Pages and Test Package"
-    from templates import nbdev
+    from tjutils.templates import nbdev
 
     copy_template(
         nbdev, "github_action_doc_deploy.yml", ".github/workflows/doc_deploy.yml"
@@ -173,6 +173,6 @@ def release():
 # %% ../notebooks/01-nbdev.ipynb 8
 def gitignore():
     "Appends to the gitignore for nbdev specific ignores."
-    from templates import nbdev
+    from tjutils.templates import nbdev
 
     copy_template(nbdev, "gitignore", ".gitignore", append=True)
