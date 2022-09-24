@@ -20,6 +20,8 @@ from .utils import copy_template
 
 # %% ../notebooks/01-nbdev.ipynb 2
 def _get_classifier_value(classifiers, name):
+    if classifiers is None: 
+        return None
     classifier = [c for c in classifiers if c.startswith(f"{name} :: ")]
     if len(classifier) == 1:
         return classifier[0].split(" :: ")[1]
@@ -54,11 +56,11 @@ def generate():
     doc_url = urlparse(poetry.get("documentation", f"https://tjpalanca.com/{git_repo}"))
     doc_host = f"{doc_url.scheme}://{doc_url.netloc}"
     doc_baseurl = doc_url.path
-    if classifiers := poetry.get("classifiers"):
-        if status := _get_classifier_value(classifiers, "Development Status"):
-            status = status.split(" - ")[0]
-        audience = _get_classifier_value(classifiers, "Intended Audience")
-        language = _get_classifier_value(classifiers, "Natural Language")
+    classifiers = poetry.get("classifiers")
+    if status := _get_classifier_value(classifiers, "Development Status"):
+        status = status.split(" - ")[0]
+    audience = _get_classifier_value(classifiers, "Intended Audience")
+    language = _get_classifier_value(classifiers, "Natural Language")
     inferred = {
         "repo": git_repo,
         "branch": git_branch,
