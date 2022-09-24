@@ -17,7 +17,7 @@ keywords = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 GitPython = "^3.1.27"
 nbdev = "^2.3.6"
 fastcore = "^1.5.27"
@@ -26,6 +26,7 @@ black = "^22.8.0"
 flake8 = "^5.0.4"
 bandit = "^1.7.4"
 ipykernel = "^6.15.3"
+tomli = "^2.0.1"
 
 [tool.poetry.scripts]
 tjdev_generate = "tjutils.nbdev:generate"

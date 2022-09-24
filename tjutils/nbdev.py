@@ -4,7 +4,7 @@
 __all__ = ['generate', 'export', 'BumpRule', 'version', 'github_actions']
 
 # %% ../notebooks/01-nbdev.ipynb 1
-import tomllib
+import tomli
 import subprocess  # nosec
 from fastcore.xtras import repo_details
 from nbdev import nbdev_export
@@ -39,7 +39,7 @@ def generate():
 
     # Read pyproject.toml
     with open("pyproject.toml", "rb") as f:
-        data = tomllib.load(f)
+        data = tomli.load(f)
         poetry = data["tool"]["poetry"]
         nbdev = data["tool"].get("nbdev") or {}
 
