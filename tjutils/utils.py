@@ -8,15 +8,14 @@ import urllib.request
 from pathlib import Path
 
 # %% ../notebooks/00-utils.ipynb 2
-TEMPLATES_URL="https://raw.githubusercontent.com/tjpalanca/tjutils-py/master/templates"
+TEMPLATES_URL = (
+    "https://raw.githubusercontent.com/tjpalanca/tjutils-py/master/templates"
+)
 
 # %% ../notebooks/00-utils.ipynb 3
-def copy_template(tmp:str, file:str):
+def copy_template(tmp: str, file: str):
     "Copies a template from the templates directory"
     filepath = Path(file)
     filepath.parent.mkdir(parents=True, exist_ok=True)
-    urllib.request.urlretrieve(
-        url=f"{TEMPLATES_URL}/{tmp}", 
-        filename=file
-    )
+    urllib.request.urlretrieve(url=f"{TEMPLATES_URL}/{tmp}", filename=file)
     return None

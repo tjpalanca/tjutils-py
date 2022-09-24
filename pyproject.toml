@@ -25,7 +25,7 @@ GitPython = "^3.1.27"
 nbdev = "^2.3.6"
 fastcore = "^1.5.27"
 mypy = "^0.971"
-black = "^22.8.0"
+black = {extras = ["jupyter"], version = "^22.8.0"}
 flake8 = "^5.0.4"
 bandit = "^1.7.4"
 ipykernel = "^6.15.3"
@@ -36,6 +36,7 @@ tjdev_generate = "tjutils.nbdev:generate"
 tjdev_export = "tjutils.nbdev:export"
 tjdev_version = "tjutils.nbdev:version"
 tjdev_nbdev_gha = "tjutils.nbdev:github_actions"
+tjdev_release = "tjutils.nbdev:release"
 
 [build-system]
 requires = ["poetry-core"]
