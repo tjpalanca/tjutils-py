@@ -4,18 +4,20 @@
 __all__ = ['TEMPLATES_URL', 'copy_template']
 
 # %% ../notebooks/00-utils.ipynb 1
-import urllib.request
+import requests
 from pathlib import Path
 
-# %% ../notebooks/00-utils.ipynb 2
+# %% ../notebooks/00-utils.ipynb 3
 TEMPLATES_URL = (
     "https://raw.githubusercontent.com/tjpalanca/tjutils-py/master/templates"
 )
 
-# %% ../notebooks/00-utils.ipynb 3
-def copy_template(tmp: str, file: str):
+# %% ../notebooks/00-utils.ipynb 4
+def copy_template(tmp: str, file: str, append: bool = False):
     "Copies a template from the templates directory"
     filepath = Path(file)
     filepath.parent.mkdir(parents=True, exist_ok=True)
-    urllib.request.urlretrieve(url=f"{TEMPLATES_URL}/{tmp}", filename=file)
+    resp = requests.get(f"{TEMPLATES_URL}/{tmp}")
+    with open(file, "ab" if append else "wb") as f:
+        f.write(resp.content)
     return None

@@ -2,6 +2,10 @@
 
 <!-- do not remove -->
 
+## 0.6.0
+
+* Feature: Add ability to import gitignore for nbdev projects
+
 ## 0.5.1
 
 * Fix wrong command for `tjdev_release`
@@ -30,7 +34,7 @@
 ## 0.4.0
 
 * Require only Python 3.10 to enable GitHub Actions. As a result, switch from `tomllib` to `tomli`.
-
+R
 ## 0.3.0
 
 * Add Github Actions 
