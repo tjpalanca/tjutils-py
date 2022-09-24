@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tjutils"
-version = "0.4.4"
+version = "0.5.0"
 description = "Python Utilities for TJ P"
 authors = ["TJ P <mail@tjpalanca.com>"]
 license = "MIT"

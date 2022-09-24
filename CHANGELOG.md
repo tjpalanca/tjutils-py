@@ -2,7 +2,7 @@
 
 <!-- do not remove -->
 
-## 0.4.4
+## 0.5.0
 
 * Feature: `tjdev_release` release to both git and pypi 
 * Feature: `tjdev_export` now formats the notebooks with `{black}`
