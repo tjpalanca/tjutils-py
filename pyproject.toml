@@ -19,19 +19,18 @@ keywords = [
 [tool.poetry.dependencies]
 python = "^3.11"
 GitPython = "^3.1.27"
+nbdev = "^2.3.6"
+fastcore = "^1.5.27"
+mypy = "^0.971"
+black = "^22.8.0"
+flake8 = "^5.0.4"
+bandit = "^1.7.4"
+ipykernel = "^6.15.3"
 
 [tool.poetry.scripts]
 tjdev_generate = "tjutils.nbdev:generate"
 tjdev_export = "tjutils.nbdev:export"
 tjdev_version = "tjutils.nbdev:version"
-
-[tool.poetry.group.dev.dependencies]
-mypy = "^0.971"
-black = "^22.8.0"
-flake8 = "^5.0.4"
-bandit = "^1.7.4"
-nbdev = "^2.3.6"
-ipykernel = "^6.15.3"
 
 [build-system]
 requires = ["poetry-core"]
