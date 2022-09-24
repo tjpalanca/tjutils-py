@@ -2,6 +2,11 @@
 
 <!-- do not remove -->
 
+## 0.2.1
+
+* Fix unexported command for poetry 
+* Updates to documentation
+
 ## 0.2.0
 
 * Change: Renamed `tj_nbdev_*` scripts to `tjdev_*`
