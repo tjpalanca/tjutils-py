@@ -4,6 +4,11 @@
 
 ## 0.4.4
 
+* Feature: `tjdev_release` release to both git and pypi 
+* Feature: `tjdev_export` now formats the notebooks with `{black}`
+
+## 0.4.4
+
 * Bugfix, `status` and other variables not set
 
 ## 0.4.3
