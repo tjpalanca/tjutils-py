@@ -2,6 +2,10 @@
 
 <!-- do not remove -->
 
+## 0.4.0
+
+* Require only Python 3.10 to enable GitHub Actions. As a result, switch from `tomllib` to `tomli`.
+
 ## 0.3.0
 
 * Add Github Actions 
