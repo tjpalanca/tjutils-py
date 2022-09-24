@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tjutils"
-version = "0.2.1"
+version = "0.3.0"
 description = "Python Utilities for TJ P"
 authors = ["TJ P <mail@tjpalanca.com>"]
 license = "MIT"
@@ -31,6 +31,7 @@ ipykernel = "^6.15.3"
 tjdev_generate = "tjutils.nbdev:generate"
 tjdev_export = "tjutils.nbdev:export"
 tjdev_version = "tjutils.nbdev:version"
+tjdev_nbdev_gha = "tjutils.nbdev:github_actions"
 
 [build-system]
 requires = ["poetry-core"]

@@ -10,4 +10,6 @@ d = { 'settings': { 'branch': 'master',
                                'tjutils.nbdev._poetry_command': ('01-nbdev.html#_poetry_command', 'tjutils/nbdev.py'),
                                'tjutils.nbdev.export': ('01-nbdev.html#export', 'tjutils/nbdev.py'),
                                'tjutils.nbdev.generate': ('01-nbdev.html#generate', 'tjutils/nbdev.py'),
-                               'tjutils.nbdev.version': ('01-nbdev.html#version', 'tjutils/nbdev.py')}}}
+                               'tjutils.nbdev.github_actions': ('01-nbdev.html#github_actions', 'tjutils/nbdev.py'),
+                               'tjutils.nbdev.version': ('01-nbdev.html#version', 'tjutils/nbdev.py')},
+            'tjutils.utils': {'tjutils.utils.copy_template': ('00-utils.html#copy_template', 'tjutils/utils.py')}}}

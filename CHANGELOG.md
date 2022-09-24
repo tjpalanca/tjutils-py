@@ -2,6 +2,11 @@
 
 <!-- do not remove -->
 
+## 0.3.0
+
+* Add Github Actions 
+* Feature: `tjdev_nbdev_gha` adds test and docs deployment github actions
+
 ## 0.2.1
 
 * Fix unexported command for poetry 
