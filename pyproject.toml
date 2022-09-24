@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tjutils"
-version = "0.1.3"
+version = "0.2.0"
 description = "Python Utilities for TJ P"
 authors = ["TJ P <mail@tjpalanca.com>"]
 license = "MIT"
@@ -21,7 +21,9 @@ python = "^3.11"
 GitPython = "^3.1.27"
 
 [tool.poetry.scripts]
-tj_nbdev_export = "tjutils.nbdev:export"
+tjdev_generate = "tjutils.nbdev:generate"
+tjdev_export = "tjutils.nbdev:export"
+tjdev_version = "tjutils.nbdev:version"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^0.971"

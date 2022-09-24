@@ -2,6 +2,11 @@
 
 <!-- do not remove -->
 
+## 0.2.0
+
+* Change: Renamed `tj_nbdev_*` scripts to `tjdev_*`
+* Feature: `tjdev_version` updates both poetry and nbdev versions 
+
 ## 0.1.3
 
 * Bugfix: `export()` feature didn't work outside of the notebook
