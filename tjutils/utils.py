@@ -17,7 +17,7 @@ def copy_template(tmp: str, file: str, append: bool = False):
     "Copies a template from the templates directory"
     filepath = Path(file)
     filepath.parent.mkdir(parents=True, exist_ok=True)
-    content = pkg_resources.files("templates").joinpath(tmp).read_text()
+    content = pkg_resources.files("tjutils").joinpath(f"templates/{tmp}").read_text()
     with open(file, "a" if append else "w") as f:
         f.write(content)
     return None

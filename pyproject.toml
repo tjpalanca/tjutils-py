@@ -1,12 +1,11 @@
 [tool.poetry]
 name = "tjutils"
-version = "0.6.3"
+version = "0.6.4"
 description = "Python Utilities for TJ P"
 authors = ["TJ P <mail@tjpalanca.com>"]
 license = "MIT"
 readme = "README.md"
 documentation = "https://tjpalanca.com/tjutils-py"
-include = ["templates/**"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Topic :: Utilities"
