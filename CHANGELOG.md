@@ -2,6 +2,10 @@
 
 <!-- do not remove -->
 
+## 0.5.1
+
+* Fix wrong command for `tjdev_release`
+
 ## 0.5.0
 
 * Feature: `tjdev_release` release to both git and pypi 
