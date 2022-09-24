@@ -166,4 +166,4 @@ def release():
     "Creates a release on github and poetry"
     release_gh()
     _poetry_command("build")
-    _poetry_command("release")
+    _poetry_command("publish")
