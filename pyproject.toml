@@ -17,7 +17,7 @@ keywords = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 GitPython = "^3.1.27"
 nbdev = "^2.3.6"
 fastcore = "^1.5.27"
