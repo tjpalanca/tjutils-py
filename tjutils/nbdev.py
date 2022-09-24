@@ -72,7 +72,7 @@ def generate():
         "cfg_name": nbdev.get("cfg_name", "settings.ini"),
         "lib_name": poetry["name"],
         "git_url": git_url,
-        "custom_sidebar": nbdev.get("sidebar", "False"),
+        "custom_sidebar": nbdev.get("custom_sidebar", "False"),
         "nbs_path": nbdev.get("nbs_path", "notebooks"),
         "lib_path": poetry["name"],
         "doc_path": nbdev.get("doc_path", "_docs"),

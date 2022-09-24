@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tjutils"
-version = "0.4.2"
+version = "0.4.3"
 description = "Python Utilities for TJ P"
 authors = ["TJ P <mail@tjpalanca.com>"]
 license = "MIT"
@@ -15,6 +15,9 @@ keywords = [
     "nbdev",
     "utilities"
 ]
+
+[tool.nbdev]
+custom_sidebar = "True"
 
 [tool.poetry.dependencies]
 python = "^3.9"

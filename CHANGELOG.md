@@ -2,6 +2,10 @@
 
 <!-- do not remove -->
 
+## 0.4.3
+
+* Custom sidebar and cosmetic fixes
+
 ## 0.4.2
 
 * Back to 3.9 again, not working
