@@ -2,6 +2,10 @@
 
 <!-- do not remove -->
 
+## 0.4.1
+
+* Require back to Python 3.11 but add .python-version file to `github_actions()` in order to satisfy the function.
+
 ## 0.4.0
 
 * Require only Python 3.10 to enable GitHub Actions. As a result, switch from `tomllib` to `tomli`.
