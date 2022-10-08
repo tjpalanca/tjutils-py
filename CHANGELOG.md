@@ -4,27 +4,8 @@
 
 ## 0.6.6
 
-* Miscellaneous fixes
-
-## 0.6.5
-
-* Miscellaneous fixes
-
-## 0.6.4
-
-* Attempt to fix template dir access for copy_template
-
-## 0.6.3
-
-* Attempt to fix template dir access for copy_template
-
-## 0.6.2
-
-* Include templates dir
-
-## 0.6.1
-
 * Change to using the local file versions instead of downloading from github
+* Miscellaneous fixes
 
 ## 0.6.0
 
