@@ -22,7 +22,7 @@ custom_sidebar = "True"
 [tool.poetry.dependencies]
 python = "^3.9"
 GitPython = "^3.1.27"
-nbdev = "^2.3.6"
+nbdev = "^2.3.7"
 fastcore = "^1.5.27"
 mypy = "^0.971"
 black = {extras = ["jupyter"], version = "^22.8.0"}
