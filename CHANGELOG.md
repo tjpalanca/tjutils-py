@@ -2,6 +2,10 @@
 
 <!-- do not remove -->
 
+## 0.6.5
+
+* Miscellaneous fixes
+
 ## 0.6.4
 
 * Attempt to fix template dir access for copy_template

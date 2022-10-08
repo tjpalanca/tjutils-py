@@ -109,7 +109,7 @@ def generate():
         "language": nbdev.get("language") or language or ("English"),
         "recursive": nbdev.get("recursive", "False"),
         "black_formatting": nbdev.get("black_formatting", "True"),
-        "readme_nb": nbdev.get("readme_nb", "README.ipynb"),
+        "readme_nb": nbdev.get("readme_nb", "index.ipynb"),
         "title": poetry["name"],
         "allowed_metadata_keys": nbdev.get("allowed_metadata_keys"),
         "allowed_cell_metadata_keys": nbdev.get("allowed_cell_metadata_keys"),
@@ -153,7 +153,7 @@ def version(rule: str):  # PEP-440 compliant bump rule
 
 # %% ../notebooks/01-nbdev.ipynb 6
 def github_actions():
-    "Add GitHub Actions Workflows to deploy documentation to GitHub Pages and Test Package"
+    "Add GitHub Actions Workflows"
     copy_template(
         "nbdev/github_action_doc_deploy.yml", ".github/workflows/doc_deploy.yml"
     )
