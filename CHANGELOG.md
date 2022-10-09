@@ -2,6 +2,10 @@
 
 <!-- do not remove -->
 
+## 0.7.1
+
+* Fix handling of branch name in `tjdev_export`.
+
 ## 0.7.0
 
 * Update github actions to be more compatible with poetry-style nbdev.

@@ -66,8 +66,7 @@ def generate():
     # Read git repository
     repo = Repo(".")
     git_url = repo.remotes["origin"].url
-    git_branch = repo.active_branch.name
-    git_user, git_repo = repo_details(Repo(".").remotes["origin"].url)
+    git_user, git_repo = repo_details(repo.remotes["origin"].url)
 
     # Gather as much config from data sources
     authors = ", ".join(aut.split("<")[0].strip() for aut in poetry["authors"])
@@ -81,7 +80,7 @@ def generate():
     language = _get_classifier_value(classifiers, "Natural Language")
     inferred = {
         "repo": git_repo,
-        "branch": git_branch,
+        "branch": nbdev.get("branch") or "master",
         "user": git_user,
         "author": authors,
         "author_email": ", ".join(

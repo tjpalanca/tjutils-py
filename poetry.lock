@@ -743,7 +743,7 @@ test = ["pytest (>=3.0.0)", "pytest-cov"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "51bfcd6f486e490eef6816f32a84552291d2948b7a451b7520d4e2b850d15b28"
+content-hash = "24e0efdcf684d372bdee5a4dcc77ff803ca1d869c1d06f13d53eb7d3c01bcc2b"
 
 [metadata.files]
 appnope = [
