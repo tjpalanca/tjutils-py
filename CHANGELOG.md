@@ -2,6 +2,10 @@
 
 <!-- do not remove -->
 
+## 0.7.0
+
+* Update github actions to be more compatible with poetry-style nbdev.
+
 ## 0.6.6
 
 * Change to using the local file versions instead of downloading from github
