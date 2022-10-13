@@ -2,6 +2,17 @@
 
 <!-- do not remove -->
 
+## 0.8.0
+
+### New Features
+
+- Add theming to the quarto website ([#2](https://github.com/tjpalanca/tjutils-py/issues/2))
+
+### Changes 
+
+- By default, `settings.ini` `recursive` option set to True 
+- Reorganize github actions, limit pkg_testing workflow to pushes to master 
+
 ## 0.7.1
 
 * Fix handling of branch name in `tjdev_export`.
