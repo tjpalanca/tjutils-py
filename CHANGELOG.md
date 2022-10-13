@@ -2,6 +2,12 @@
 
 <!-- do not remove -->
 
+## 0.8.2
+
+### Bugfixes 
+
+- Move the theme directory to `_theme` so quarto does not treat it like content.
+
 ## 0.8.1
 
 ### Bugfixes 

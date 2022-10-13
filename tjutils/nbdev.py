@@ -207,7 +207,7 @@ def theme(overwrite=False):
     "Adds the TJ Palanca theme to quarto"
     config = get_config()
     # Copy assets
-    theme_dir = config["nbs_path"] / "theme"
+    theme_dir = config["nbs_path"] / "_theme"
     if not theme_dir.is_dir() or overwrite:
         copy_directory("nbdev/theme", str(theme_dir))
     # Merge in _quarto.yml
