@@ -39,9 +39,7 @@ website:
     image-height: 1200
     image-width: 1800
   page-footer:
-    center: "\xA9 Copyright 2009-2022 [TJ Palanca](https://www.twitter.com/tjpalanca).\
-      \ <br/>\nOpinions expressed here represent my own and not those of my employer\
-      \ or any \nother affiliation. Content on this site is subject to [policies](/policies.html).\n"
+    center: "\xA9 Copyright 2009-2022 [TJ Palanca](https://www.twitter.com/tjpalanca)."
   page-navigation: true
   reader-mode: false
   repo-actions:

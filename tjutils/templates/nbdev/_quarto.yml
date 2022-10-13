@@ -27,9 +27,7 @@ website:
     image-alt: TJ Palanca Logo
   page-footer:
     center: |
-      © Copyright 2009-2022 [TJ Palanca](https://www.twitter.com/tjpalanca). <br/>
-      Opinions expressed here represent my own and not those of my employer or any 
-      other affiliation. Content on this site is subject to [policies](/policies.html).
+      © Copyright 2009-2022 [TJ Palanca](https://www.twitter.com/tjpalanca).
 
 format:
   html:
