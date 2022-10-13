@@ -111,7 +111,7 @@ def generate():
         "audience": nbdev.get("audience") or audience or ("Developers"),
         "min_python": poetry["dependencies"]["python"].replace("^", ""),
         "language": nbdev.get("language") or language or ("English"),
-        "recursive": nbdev.get("recursive", "False"),
+        "recursive": nbdev.get("recursive", "True"),
         "black_formatting": nbdev.get("black_formatting", "True"),
         "readme_nb": nbdev.get("readme_nb", "index.ipynb"),
         "title": poetry["name"],
