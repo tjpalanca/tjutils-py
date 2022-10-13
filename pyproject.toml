@@ -5,6 +5,8 @@ description = "Python Utilities for TJ P"
 authors = ["TJ P <mail@tjpalanca.com>"]
 license = "MIT"
 readme = "README.md"
+homepage = "https://tjpalanca.com/tjutils-py"
+repository = "https://github.com/tjpalanca/tjutils-py"
 documentation = "https://tjpalanca.com/tjutils-py"
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -19,6 +21,7 @@ keywords = [
 [tool.nbdev]
 custom_sidebar = "True"
 branch = "master"
+recursive = "True"
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -39,6 +42,7 @@ tjdev_version = "tjutils.nbdev:version"
 tjdev_nbdev_gha = "tjutils.nbdev:github_actions"
 tjdev_release = "tjutils.nbdev:release"
 tjdev_nbdev_gitignore = "tjutils.nbdev:gitignore"
+tjdev_nbdev_theme = "tjutils.nbdev:theme"
 
 [build-system]
 requires = ["poetry-core"]

@@ -1,20 +1,65 @@
-project:
-  type: website
-
 format:
   html:
-    theme: cosmo
-    css: styles.css
-    toc: true
-
+    citations-hover: true
+    email-obfuscation: javascript
+    footnotes-hover: true
+    freeze: true
+    include-in-header:
+    - theme/theme.html
+    - theme/mailchimp.html
+    - theme/analytics.html
+    link-external-filter: ^(?:http:|https:)\/\/.*(tjpalanca\.com|tjp\.app)\/.*$
+    link-external-icon: true
+    link-external-newwindow: true
+    smooth-scroll: false
+    theme:
+    - litera
+    - theme/theme.scss
+    title-block-banner: false
+metadata-files:
+- nbdev.yml
+- sidebar.yml
+project:
+  preview:
+    browser: false
+    host: 0.0.0.0
+    port: 8888
+  type: website
 website:
-  twitter-card: true
-  open-graph: true
-  repo-actions: [issue]
+  cookie-consent: false
+  description: Python Utilities for TJ P
+  favicon: theme/logo/logo-small.png
+  image: theme/logo/logo-banner.png
   navbar:
-    background: primary
-    search: true
-  sidebar:
-    style: floating
-
-metadata-files: [nbdev.yml, sidebar.yml]
+    logo: theme/logo/logo-small.png
+    pinned: false
+  open-graph:
+    image: theme/logo/logo-banner.png
+    image-alt: TJ Palanca Logo
+    image-height: 1200
+    image-width: 1800
+  page-footer:
+    center: "\xA9 Copyright 2009-2022 [TJ Palanca](https://www.twitter.com/tjpalanca).\
+      \ <br/>\nOpinions expressed here represent my own and not those of my employer\
+      \ or any \nother affiliation. Content on this site is subject to [policies](/policies.html).\n"
+  page-navigation: true
+  reader-mode: false
+  repo-actions:
+  - edit
+  - issue
+  repo-branch: master
+  repo-url: https://github.com/tjpalanca/tjutils-py
+  search:
+    copy-button: true
+    limit: 20
+    location: navbar
+    type: overlay
+  site-url: https://tjpalanca.com/tjutils-py
+  title: tjutils
+  twitter-card:
+    creator: '@tjpalanca'
+    image: theme/logo/logo-banner.png
+    image-alt: TJ Palanca Logo
+    image-height: 1200
+    image-width: 1800
+    site: '@tjpalanca'

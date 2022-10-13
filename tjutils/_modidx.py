@@ -14,5 +14,8 @@ d = { 'settings': { 'branch': 'master',
                                'tjutils.nbdev.github_actions': ('01-nbdev.html#github_actions', 'tjutils/nbdev.py'),
                                'tjutils.nbdev.gitignore': ('01-nbdev.html#gitignore', 'tjutils/nbdev.py'),
                                'tjutils.nbdev.release': ('01-nbdev.html#release', 'tjutils/nbdev.py'),
+                               'tjutils.nbdev.theme': ('01-nbdev.html#theme', 'tjutils/nbdev.py'),
                                'tjutils.nbdev.version': ('01-nbdev.html#version', 'tjutils/nbdev.py')},
-            'tjutils.utils': {'tjutils.utils.copy_template': ('00-utils.html#copy_template', 'tjutils/utils.py')}}}
+            'tjutils.utils': { 'tjutils.utils.copy_directory': ('00-utils.html#copy_directory', 'tjutils/utils.py'),
+                               'tjutils.utils.copy_template': ('00-utils.html#copy_template', 'tjutils/utils.py'),
+                               'tjutils.utils.copy_yaml': ('00-utils.html#copy_yaml', 'tjutils/utils.py')}}}
