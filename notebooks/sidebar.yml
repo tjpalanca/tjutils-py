@@ -1,6 +1,6 @@
 website:
   sidebar:
     contents:
-      - README.ipynb
+      - index.ipynb
       - 01-nbdev.ipynb
       - 00-utils.ipynb
