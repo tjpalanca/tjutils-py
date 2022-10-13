@@ -2,6 +2,13 @@
 
 <!-- do not remove -->
 
+## 0.8.1
+
+### Bugfixes 
+
+- Simplify default footer
+- Make `tjdev_nbdev_theme` safer, don't overwrite unless explicitly specified. 
+
 ## 0.8.0
 
 ### New Features
