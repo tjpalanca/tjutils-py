@@ -2,6 +2,16 @@
 
 <!-- do not remove -->
 
+## 0.8.3
+
+### Minor Changes 
+
+- Quarto preview options can be set within the `[tool.quarto]` section of `pyproject.toml`. 
+
+### Bugfixes 
+
+- Allow the theme to exist but not be part of the sidebar. 
+
 ## 0.8.2
 
 ### Bugfixes 
