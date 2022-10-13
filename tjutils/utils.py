@@ -34,9 +34,12 @@ def copy_yaml(template_yaml: str, destination_yaml: str):
     dst = Path(destination_yaml)
     with src.open("r") as f:
         src_data = yaml.safe_load(f)
-    with dst.open("r") as f:
-        dst_data = yaml.safe_load(f)
-    new_data = dst_data | src_data
+    if dst.is_file():
+        with dst.open("r") as f:
+            dst_data = yaml.safe_load(f)
+        new_data = dst_data | src_data
+    else:
+        new_data = src_data
     with dst.open("w") as f:
         yaml.dump(new_data, f)
     return None

@@ -212,5 +212,5 @@ def theme(overwrite=False):
         copy_directory("nbdev/theme", str(theme_dir))
     # Merge in _quarto.yml
     quarto_file = config["nbs_path"] / "_quarto.yml"
-    if quarto_file.is_file():
+    if not quarto_file.is_file() or overwrite:
         copy_yaml("nbdev/_quarto.yml", str(quarto_file))
