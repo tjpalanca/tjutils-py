@@ -5,16 +5,16 @@ format:
     footnotes-hover: true
     freeze: true
     include-in-header:
-    - _theme/theme.html
-    - _theme/mailchimp.html
-    - _theme/analytics.html
+    - theme/theme.htm
+    - theme/mailchimp.htm
+    - theme/analytics.htm
     link-external-filter: ^(?:http:|https:)\/\/.*(tjpalanca\.com|tjp\.app)\/.*$
     link-external-icon: true
     link-external-newwindow: true
     smooth-scroll: false
     theme:
     - litera
-    - _theme/theme.scss
+    - theme/theme.scss
     title-block-banner: false
 metadata-files:
 - nbdev.yml
@@ -28,13 +28,13 @@ project:
 website:
   cookie-consent: false
   description: Python Utilities for TJ P
-  favicon: _theme/logo/logo-small.png
-  image: _theme/logo/logo-banner.png
+  favicon: theme/logo/logo-small.png
+  image: theme/logo/logo-banner.png
   navbar:
-    logo: _theme/logo/logo-small.png
+    logo: theme/logo/logo-small.png
     pinned: false
   open-graph:
-    image: _theme/logo/logo-banner.png
+    image: theme/logo/logo-banner.png
     image-alt: TJ Palanca Logo
     image-height: 1200
     image-width: 1800
@@ -56,7 +56,7 @@ website:
   title: tjutils
   twitter-card:
     creator: '@tjpalanca'
-    image: _theme/logo/logo-banner.png
+    image: theme/logo/logo-banner.png
     image-alt: TJ Palanca Logo
     image-height: 1200
     image-width: 1800

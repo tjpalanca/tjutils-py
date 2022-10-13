@@ -1,10 +1,6 @@
-project: 
-  resources: 
-    - "_theme/**"
-
 website:
-  image: _theme/logo/logo-banner.png
-  favicon: _theme/logo/logo-small.png
+  image: theme/logo/logo-banner.png
+  favicon: theme/logo/logo-small.png
   repo-actions: [edit, issue]
   cookie-consent: false
   reader-mode: false
@@ -15,17 +11,17 @@ website:
     limit: 20
     copy-button: true
   navbar:
-    logo: _theme/logo/logo-small.png
+    logo: theme/logo/logo-small.png
     pinned: false
   open-graph: 
-    image: _theme/logo/logo-banner.png
+    image: theme/logo/logo-banner.png
     image-width: 1800 
     image-height: 1200
     image-alt: TJ Palanca Logo
   twitter-card:
     site: "@tjpalanca"
     creator: "@tjpalanca"
-    image: _theme/logo/logo-banner.png
+    image: theme/logo/logo-banner.png
     image-width: 1800 
     image-height: 1200
     image-alt: TJ Palanca Logo
@@ -37,11 +33,11 @@ format:
   html:
     theme: 
       - litera
-      - _theme/theme.scss
+      - theme/theme.scss
     include-in-header: 
-      - _theme/theme.html
-      - _theme/mailchimp.html
-      - _theme/analytics.html
+      - theme/theme.htm
+      - theme/mailchimp.htm
+      - theme/analytics.htm
     citations-hover: true
     footnotes-hover: true
     link-external-icon: true 
