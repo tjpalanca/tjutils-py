@@ -66,6 +66,7 @@ def generate():
         data = tomli.load(f)
         poetry = data["tool"]["poetry"]
         nbdev = data["tool"].get("nbdev") or {}
+        quarto = data["tool"].get("quarto") or {}
 
     # Read git repository
     repo = Repo(".")
@@ -133,14 +134,15 @@ def generate():
 
     # Write quarto file if it exists
     quarto_file = Path(config["nbs_path"]) / "_quarto.yml"
+    preview = {
+        "host": quarto.get("host", "0.0.0.0"),
+        "port": quarto.get("port", 8888),
+        "browser": quarto.get("browser", False),
+    }
     if quarto_file.is_file():
         with quarto_file.open("r") as f:
             quarto = yaml.safe_load(f)
-        quarto["project"]["preview"] = {
-            "host": "0.0.0.0",
-            "port": 8888,
-            "browser": False,
-        }
+        quarto["project"]["preview"] = preview
         quarto["website"]["title"] = poetry["name"]
         quarto["website"]["description"] = poetry["description"]
         homepage = poetry.get("homepage")
