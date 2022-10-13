@@ -1,3 +1,7 @@
+project: 
+  resources: 
+    - "_theme/**"
+
 website:
   image: _theme/logo/logo-banner.png
   favicon: _theme/logo/logo-small.png
