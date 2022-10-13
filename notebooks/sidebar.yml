@@ -1,6 +1,5 @@
 website:
   sidebar:
     contents:
-      - index.ipynb
       - 01-nbdev.ipynb
       - 00-utils.ipynb
