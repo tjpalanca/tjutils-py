@@ -2,6 +2,12 @@
 
 <!-- do not remove -->
 
+## 0.8.4
+
+### Bugfixes 
+
+- `lib_path` only contains underscores to conform to how `poetry` installs the current package. 
+
 ## 0.8.3
 
 ### Minor Changes 
