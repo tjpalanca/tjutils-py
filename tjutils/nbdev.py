@@ -99,7 +99,7 @@ def generate():
         "git_url": git_url,
         "custom_sidebar": nbdev.get("custom_sidebar", "False"),
         "nbs_path": nbdev.get("nbs_path", "notebooks"),
-        "lib_path": poetry["name"],
+        "lib_path": poetry["name"].replace("-", "_"),
         "doc_path": nbdev.get("doc_path", "_docs"),
         "tst_flags": nbdev.get("tst_flags", "notest"),
         "version": poetry["version"],
