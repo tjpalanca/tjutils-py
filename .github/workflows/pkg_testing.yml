@@ -33,7 +33,7 @@ jobs:
       uses: actions/cache@v2
       with:
         path: .venv
-        key: |- 
+        key: >-
           venv-
           ${{ runner.os }}-
           ${{ steps.setup-python.outputs.python-version }}-
