@@ -26,8 +26,8 @@ website:
     image-height: 1200
     image-alt: TJ Palanca Logo
   page-footer:
-    center: |
-      © Copyright 2009-2022 [TJ Palanca](https://www.twitter.com/tjpalanca).
+    center: |-
+      © Copyright 2009-2022 [TJ Palanca](https://www.twitter.com/tjpalanca)
 
 format:
   html:
