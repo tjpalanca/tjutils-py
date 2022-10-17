@@ -5,6 +5,7 @@ __all__ = ['BumpRule', 'generate', 'export', 'version', 'github_actions', 'relea
 
 # %% ../notebooks/01-nbdev.ipynb 1
 import tomli
+import tomlkit
 import subprocess  # nosec
 import yaml
 from fastcore.xtras import repo_details
@@ -54,7 +55,8 @@ def generate():
     and generate:
 
     * a compliant `settings.ini` file for nbdev, and
-    * a compliant `_quarto.yml` file for the quarto-based documentation.
+    * a compliant `_quarto.yml` file for the quarto-based documentation, and
+    * a filled-in `pyproject.toml` for poetry.
 
     Most poetry configs are mapped to the fields that make sense, but for configs that
     are not present in pyproject.toml, they can be supplied via a `[tool.nbdev]` section
@@ -62,11 +64,12 @@ def generate():
     """
 
     # Read pyproject.toml
-    with open("pyproject.toml", "rb") as f:
-        data = tomli.load(f)
-        poetry = data["tool"]["poetry"]
-        nbdev = data["tool"].get("nbdev") or {}
-        quarto = data["tool"].get("quarto") or {}
+    pyproject_file = Path("pyproject.toml")
+    with pyproject_file.open("rb") as f:
+        pyproject = tomli.load(f)
+    poetry = pyproject["tool"]["poetry"]
+    nbdev = pyproject["tool"].get("nbdev") or {}
+    quarto = pyproject["tool"].get("quarto") or {}
 
     # Read git repository
     repo = Repo(".")
@@ -75,7 +78,9 @@ def generate():
 
     # Gather as much config from data sources
     authors = ", ".join(aut.split("<")[0].strip() for aut in poetry["authors"])
-    doc_url = urlparse(poetry.get("documentation", f"https://tjpalanca.com/{git_repo}"))
+    site_url = poetry.get("homepage", f"https://tjpalanca.com/{git_repo}")
+    docs_url = poetry.get("documentation", site_url)
+    doc_url = urlparse(docs_url)
     doc_host = f"{doc_url.scheme}://{doc_url.netloc}"
     doc_baseurl = doc_url.path
     classifiers = poetry.get("classifiers")
@@ -83,10 +88,9 @@ def generate():
         status = status.split(" - ")[0]
     audience = _get_classifier_value(classifiers, "Intended Audience")
     language = _get_classifier_value(classifiers, "Natural Language")
-    branch = nbdev.get("branch") or "master"
     inferred = {
         "repo": git_repo,
-        "branch": branch,
+        "branch": nbdev.get("branch", "master"),
         "user": git_user,
         "author": authors,
         "author_email": ", ".join(
@@ -132,38 +136,35 @@ def generate():
     else:
         config = inferred
 
-    # Write quarto file if it exists
+    # Write _quarto.yml
     quarto_file = Path(config["nbs_path"]) / "_quarto.yml"
-    preview = {
-        "host": quarto.get("host", "0.0.0.0"),
-        "port": quarto.get("port", 8888),
-        "browser": quarto.get("browser", False),
-    }
     if quarto_file.is_file():
         with quarto_file.open("r") as f:
-            quarto = yaml.safe_load(f)
-        quarto["project"]["preview"] = preview
-        quarto["website"]["title"] = poetry["name"]
-        quarto["website"]["description"] = poetry["description"]
-        homepage = poetry.get("homepage")
-        repository = poetry.get("repository")
-        documentation = poetry.get("documentation")
-        if site_url := homepage or documentation:
-            quarto["website"]["site-url"] = site_url
-        if repo_url := repository:
-            quarto["website"]["repo-url"] = repo_url
-        if branch:
-            quarto["website"]["repo-branch"] = branch
+            quarto_data = yaml.safe_load(f)
+        quarto_data["project"]["preview"] = {
+            "host": quarto.get("host", "0.0.0.0"),
+            "port": quarto.get("port", 8888),
+            "browser": quarto.get("browser", False),
+        }
         with quarto_file.open("w") as f:
-            yaml.safe_dump(quarto, f)
+            yaml.safe_dump(quarto_data, f)
 
-    # Create the configuration file
+    # Write pyproject.toml
+    with pyproject_file.open("r") as f:
+        pyproject_data = tomlkit.load(f)
+    pyproject_data["tool"]["poetry"]["homepage"] = site_url
+    pyproject_data["tool"]["poetry"]["documentation"] = docs_url
+    pyproject_data["tool"]["poetry"]["repository"] = git_url
+    with pyproject_file.open("w") as f:
+        tomlkit.dump(pyproject_data, f)
+
+    # Write settings.ini
     config = {k: v for k, v in config.items() if v is not None}
     path = config.pop("path")
     name = config.pop("cfg_name")
     parser = ConfigParser()
     parser["DEFAULT"] = config
-    with open(Path(path) / name, "w") as f:
+    with settings_file.open("w") as f:
         parser.write(f)
 
     # Format ipynb with black
