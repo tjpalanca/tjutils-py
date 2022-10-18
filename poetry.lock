@@ -220,7 +220,7 @@ smmap = ">=3.0.1,<6"
 
 [[package]]
 name = "GitPython"
-version = "3.1.28"
+version = "3.1.29"
 description = "GitPython is a python library used to interact with Git repositories"
 category = "main"
 optional = false
@@ -305,7 +305,7 @@ testing = ["Django (<3.1)", "colorama", "docopt", "pytest (<7.0.0)"]
 
 [[package]]
 name = "jupyter-client"
-version = "7.3.5"
+version = "7.4.2"
 description = "Jupyter protocol implementation and client libraries"
 category = "main"
 optional = false
@@ -472,7 +472,7 @@ python-versions = "*"
 
 [[package]]
 name = "pip"
-version = "22.2.2"
+version = "22.3"
 description = "The PyPA recommended tool for installing Python packages."
 category = "main"
 optional = false
@@ -658,7 +658,7 @@ tests = ["cython", "littleutils", "pygments", "pytest", "typeguard"]
 
 [[package]]
 name = "stevedore"
-version = "4.0.0"
+version = "4.0.1"
 description = "Manage dynamic plugins for Python applications"
 category = "main"
 optional = false
@@ -684,6 +684,14 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "tomlkit"
+version = "0.11.5"
+description = "Style preserving TOML library"
+category = "main"
+optional = false
+python-versions = ">=3.6,<4.0"
+
+[[package]]
 name = "tornado"
 version = "6.2"
 description = "Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed."
@@ -693,13 +701,14 @@ python-versions = ">= 3.7"
 
 [[package]]
 name = "traitlets"
-version = "5.4.0"
+version = "5.5.0"
 description = ""
 category = "main"
 optional = false
 python-versions = ">=3.7"
 
 [package.extras]
+docs = ["myst-parser", "pydata-sphinx-theme", "sphinx"]
 test = ["pre-commit", "pytest"]
 
 [[package]]
@@ -743,7 +752,7 @@ test = ["pytest (>=3.0.0)", "pytest-cov"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "24e0efdcf684d372bdee5a4dcc77ff803ca1d869c1d06f13d53eb7d3c01bcc2b"
+content-hash = "ab4f55efd0b33aaf90fcb3134508a419cc2ce8ec4f402b074b7bf5fe957fa6b7"
 
 [metadata.files]
 appnope = [
@@ -916,8 +925,8 @@ gitdb = [
     {file = "gitdb-4.0.9.tar.gz", hash = "sha256:bac2fd45c0a1c9cf619e63a90d62bdc63892ef92387424b855792a6cabe789aa"},
 ]
 GitPython = [
-    {file = "GitPython-3.1.28-py3-none-any.whl", hash = "sha256:77bfbd299d8709f6af7e0c70840ef26e7aff7cf0c1ed53b42dd7fc3a310fcb02"},
-    {file = "GitPython-3.1.28.tar.gz", hash = "sha256:6bd3451b8271132f099ceeaf581392eaf6c274af74bb06144307870479d0697c"},
+    {file = "GitPython-3.1.29-py3-none-any.whl", hash = "sha256:41eea0deec2deea139b459ac03656f0dd28fc4a3387240ec1d3c259a2c47850f"},
+    {file = "GitPython-3.1.29.tar.gz", hash = "sha256:cc36bfc4a3f913e66805a28e84703e419d9c264c1077e537b54f0e1af85dbefd"},
 ]
 ipykernel = [
     {file = "ipykernel-6.16.0-py3-none-any.whl", hash = "sha256:d3d95241cd4dd302fea9d5747b00509b58997356d1f6333c9a074c3eccb78cb3"},
@@ -932,8 +941,8 @@ jedi = [
     {file = "jedi-0.18.1.tar.gz", hash = "sha256:74137626a64a99c8eb6ae5832d99b3bdd7d29a3850fe2aa80a4126b2a7d949ab"},
 ]
 jupyter-client = [
-    {file = "jupyter_client-7.3.5-py3-none-any.whl", hash = "sha256:b33222bdc9dd1714228bd286af006533a0abe2bbc093e8f3d29dc0b91bdc2be4"},
-    {file = "jupyter_client-7.3.5.tar.gz", hash = "sha256:3c58466a1b8d55dba0bf3ce0834e4f5b7760baf98d1d73db0add6f19de9ecd1d"},
+    {file = "jupyter_client-7.4.2-py3-none-any.whl", hash = "sha256:f8929321204d3f0b446401cfadc04ed8226e77002a9e379416df8c252607f695"},
+    {file = "jupyter_client-7.4.2.tar.gz", hash = "sha256:b91a9a7b91ac69adf170d98c87917320f6b466e1c5e89b300226ef4047193376"},
 ]
 jupyter-core = [
     {file = "jupyter_core-4.11.1-py3-none-any.whl", hash = "sha256:715e22bb6cc7db3718fddfac1f69f1c7e899ca00e42bdfd4bf3705452b9fd84a"},
@@ -1009,8 +1018,8 @@ pickleshare = [
     {file = "pickleshare-0.7.5.tar.gz", hash = "sha256:87683d47965c1da65cdacaf31c8441d12b8044cdec9aca500cd78fc2c683afca"},
 ]
 pip = [
-    {file = "pip-22.2.2-py3-none-any.whl", hash = "sha256:b61a374b5bc40a6e982426aede40c9b5a08ff20e640f5b56977f4f91fed1e39a"},
-    {file = "pip-22.2.2.tar.gz", hash = "sha256:3fd1929db052f056d7a998439176d3333fa1b3f6c1ad881de1885c0717608a4b"},
+    {file = "pip-22.3-py3-none-any.whl", hash = "sha256:1daab4b8d3b97d1d763caeb01a4640a2250a0ea899e257b1e44b9eded91e15ab"},
+    {file = "pip-22.3.tar.gz", hash = "sha256:8182aec21dad6c0a49a2a3d121a87cd524b950e0b6092b181625f07ebdde7530"},
 ]
 platformdirs = [
     {file = "platformdirs-2.5.2-py3-none-any.whl", hash = "sha256:027d8e83a2d7de06bbac4e5ef7e023c02b863d7ea5d079477e722bb41ab25788"},
@@ -1237,8 +1246,8 @@ stack-data = [
     {file = "stack_data-0.5.1.tar.gz", hash = "sha256:95eb784942e861a3d80efd549ff9af6cf847d88343a12eb681d7157cfcb6e32b"},
 ]
 stevedore = [
-    {file = "stevedore-4.0.0-py3-none-any.whl", hash = "sha256:87e4d27fe96d0d7e4fc24f0cbe3463baae4ec51e81d95fbe60d2474636e0c7d8"},
-    {file = "stevedore-4.0.0.tar.gz", hash = "sha256:f82cc99a1ff552310d19c379827c2c64dd9f85a38bcd5559db2470161867b786"},
+    {file = "stevedore-4.0.1-py3-none-any.whl", hash = "sha256:01645addb67beff04c7cfcbb0a6af8327d2efc3380b0f034aa316d4576c4d470"},
+    {file = "stevedore-4.0.1.tar.gz", hash = "sha256:9a23111a6e612270c591fd31ff3321c6b5f3d5f3dabb1427317a5ab608fc261a"},
 ]
 tokenize-rt = [
     {file = "tokenize_rt-5.0.0-py2.py3-none-any.whl", hash = "sha256:c67772c662c6b3dc65edf66808577968fb10badfc2042e3027196bed4daf9e5a"},
@@ -1247,6 +1256,10 @@ tokenize-rt = [
 tomli = [
     {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
     {file = "tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"},
+]
+tomlkit = [
+    {file = "tomlkit-0.11.5-py3-none-any.whl", hash = "sha256:f2ef9da9cef846ee027947dc99a45d6b68a63b0ebc21944649505bf2e8bc5fe7"},
+    {file = "tomlkit-0.11.5.tar.gz", hash = "sha256:571854ebbb5eac89abcb4a2e47d7ea27b89bf29e09c35395da6f03dd4ae23d1c"},
 ]
 tornado = [
     {file = "tornado-6.2-cp37-abi3-macosx_10_9_universal2.whl", hash = "sha256:20f638fd8cc85f3cbae3c732326e96addff0a15e22d80f049e00121651e82e72"},
@@ -1262,8 +1275,8 @@ tornado = [
     {file = "tornado-6.2.tar.gz", hash = "sha256:9b630419bde84ec666bfd7ea0a4cb2a8a651c2d5cccdbdd1972a0c859dfc3c13"},
 ]
 traitlets = [
-    {file = "traitlets-5.4.0-py3-none-any.whl", hash = "sha256:93663cc8236093d48150e2af5e2ed30fc7904a11a6195e21bab0408af4e6d6c8"},
-    {file = "traitlets-5.4.0.tar.gz", hash = "sha256:3f2c4e435e271592fe4390f1746ea56836e3a080f84e7833f0f801d9613fec39"},
+    {file = "traitlets-5.5.0-py3-none-any.whl", hash = "sha256:1201b2c9f76097195989cdf7f65db9897593b0dfd69e4ac96016661bb6f0d30f"},
+    {file = "traitlets-5.5.0.tar.gz", hash = "sha256:b122f9ff2f2f6c1709dab289a05555be011c87828e911c0cf4074b85cb780a79"},
 ]
 typing-extensions = [
     {file = "typing_extensions-4.4.0-py3-none-any.whl", hash = "sha256:16fa4864408f655d35ec496218b85f79b3437c829e93320c7c9215ccfd92489e"},
