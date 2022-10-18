@@ -2,6 +2,12 @@
 
 <!-- do not remove -->
 
+## 0.9.0
+
+* Fix redundant quarto declarations in tjdev_export, and ensure that `homepage`,
+  `documentation` and `repository` are set in the `pyproject.toml` file.
+* Update nbdev github actions poetry version to 1.2.2
+
 ## 0.8.4
 
 ### Bugfixes 
