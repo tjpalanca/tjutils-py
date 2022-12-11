@@ -2,6 +2,10 @@
 
 <!-- do not remove -->
 
+## 0.9.1
+
+* Update package dependencies.
+
 ## 0.9.0
 
 * Fix redundant quarto declarations in tjdev_export, and ensure that `homepage`,
