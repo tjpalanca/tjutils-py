@@ -2,6 +2,11 @@
 
 <!-- do not remove -->
 
+## 0.10.0
+
+* Add a template workflow to plan and apply Terraform changes 
+* Update default python version on github actions workflows to 3.11
+
 ## 0.9.1
 
 * Update package dependencies.
