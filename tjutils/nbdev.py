@@ -184,7 +184,7 @@ def version(rule: str):  # PEP-440 compliant bump rule
 
 # %% ../notebooks/01-nbdev.ipynb 6
 def github_actions():
-    "Add GitHub Actions Workflows"
+    "Add GitHub Actions Workflows for testing and documentation"
     copy_template(
         "nbdev/github_actions/doc_deploy.yml", ".github/workflows/doc_deploy.yml"
     )

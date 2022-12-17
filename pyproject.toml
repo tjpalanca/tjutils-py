@@ -44,6 +44,7 @@ tjdev_nbdev_gha = "tjutils.nbdev:github_actions"
 tjdev_release = "tjutils.nbdev:release"
 tjdev_nbdev_gitignore = "tjutils.nbdev:gitignore"
 tjdev_nbdev_theme = "tjutils.nbdev:theme"
+tjdev_terraform_gha = "tjutils.terraform:github_actions"
 
 [build-system]
 requires = ["poetry-core"]

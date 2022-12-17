@@ -16,6 +16,7 @@ d = { 'settings': { 'branch': 'master',
                                'tjutils.nbdev.release': ('01-nbdev.html#release', 'tjutils/nbdev.py'),
                                'tjutils.nbdev.theme': ('01-nbdev.html#theme', 'tjutils/nbdev.py'),
                                'tjutils.nbdev.version': ('01-nbdev.html#version', 'tjutils/nbdev.py')},
+            'tjutils.terraform': {'tjutils.terraform.github_actions': ('02-terraform.html#github_actions', 'tjutils/terraform.py')},
             'tjutils.utils': { 'tjutils.utils.copy_directory': ('00-utils.html#copy_directory', 'tjutils/utils.py'),
                                'tjutils.utils.copy_template': ('00-utils.html#copy_template', 'tjutils/utils.py'),
                                'tjutils.utils.copy_yaml': ('00-utils.html#copy_yaml', 'tjutils/utils.py')}}}
