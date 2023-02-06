@@ -2,6 +2,10 @@
 
 <!-- do not remove -->
 
+## 0.10.1
+
+* Update dependencies to latest versions
+
 ## 0.10.0
 
 * Add a template workflow to plan and apply Terraform changes 
