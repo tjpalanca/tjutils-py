@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "00-utils.html",
+    "href": "00-utils.html",
+    "title": "Utilities",
+    "section": "",
+    "text": "We store templates in the /templates folder, then we can pull from that repo using the GitHub URL and use it in other repos I am working on.\n\n\n\n\n copy_template (tmp:str, file:str, append:bool=False)\n\nCopies a template from the templates directory\n\n\n\n\n\n copy_directory (template_dir:str, destination_dir:str)\n\nCopies a directory from the template directory\n\n\n\n\n\n merge_yaml (template_yaml:str, destination_yaml:str)\n\nMerges in a YAML file into another yaml"
+  },
+  {
+    "objectID": "00-utils.html#templates",
+    "href": "00-utils.html#templates",
+    "title": "Utilities",
+    "section": "",
+    "text": "We store templates in the /templates folder, then we can pull from that repo using the GitHub URL and use it in other repos I am working on.\n\n\n\n\n copy_template (tmp:str, file:str, append:bool=False)\n\nCopies a template from the templates directory\n\n\n\n\n\n copy_directory (template_dir:str, destination_dir:str)\n\nCopies a directory from the template directory\n\n\n\n\n\n merge_yaml (template_yaml:str, destination_yaml:str)\n\nMerges in a YAML file into another yaml"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "TJUtils (Python)",
+    "section": "",
+    "text": "This is a set of utilities to assist in development in Python. See the notebooks folder for the various functionality included in this package."
+  },
+  {
+    "objectID": "01-nbdev.html",
+    "href": "01-nbdev.html",
+    "title": "{nbdev} integration",
+    "section": "",
+    "text": "These utilities are intended to be used to integrate nbdev into the workflow, alongside some opinionated tools like {poetry}, and also enforcing some of my personal defaults.\n\ntjdev_nbdev_export to replace nbdev_export\ntjdev_nbdev_version to replace nbdev_bump_version\ntjdev_nbdev_release to replace nbdev_release_*\ntjdev_nbdev_gha adds nbdev GitHub Actions workflows that work with poetry\ntjdev_nbdev_gitignore adds a gitignore that is compatible with poetry and nbdev\ntjdev_nbdev_theme adds a theme that is consitent with the blog style\ntjdev_nbdev_config adds configurtion to fix linting tools\n\n\n\n\nconform\n\n conform ()\n\nConform nbdev, quarto, and poetry configuration. Infer information from poetry’s pyproject.toml and the git repository information and generate:\n\na compliant settings.ini file for nbdev,\na compliant _quarto.yml file for the quarto-based documentation, and\na filled-in pyproject.toml for poetry.\n\nMost poetry configs are mapped to the fields that make sense, but for configs that are not present in pyproject.toml, they can be supplied via a [tool.nbdev] section in pyproject.toml.\n\n\n\nexport\n\n export ()\n\nSimilar to nbdev_export but with specific modifications.\n\n\n\nversion\n\n version (rule:str)\n\n\n\n\n\nType\nDetails\n\n\n\n\nrule\nstr\nPEP-440 compliant bump rule\n\n\n\n\n\n\ngithub_actions\n\n github_actions ()\n\nAdd GitHub Actions Workflows for testing and documentation\n\n\n\nrelease\n\n release ()\n\nCreates a release on github and poetry\n\n\n\ngitignore\n\n gitignore ()\n\nAppends to the gitignore for nbdev specific ignores.\n\n\n\nconfig\n\n config ()\n\nCreates configuration that allows nbdev to coexist with other tools\n\n\n\ntheme\n\n theme ()\n\nAdds the TJ Palanca theme to quarto"
+  }
+]
