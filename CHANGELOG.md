@@ -2,6 +2,10 @@
 
 <!-- do not remove -->
 
+## 0.11.0
+
+* Minor maintenance updates to update to new versions of software and dependencies
+
 ## 0.10.1
 
 * Update dependencies to latest versions

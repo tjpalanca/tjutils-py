@@ -2,5 +2,4 @@ website:
   sidebar:
     contents:
       - 01-nbdev.ipynb
-      - 02-terraform.ipynb
       - 00-utils.ipynb
