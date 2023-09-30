@@ -18,16 +18,9 @@ website:
     image-width: 1800 
     image-height: 1200
     image-alt: TJ Palanca Logo
-  twitter-card:
-    site: "@tjpalanca"
-    creator: "@tjpalanca"
-    image: theme/logo/logo-banner.png
-    image-width: 1800 
-    image-height: 1200
-    image-alt: TJ Palanca Logo
   page-footer:
     center: |-
-      © Copyright 2009-2022 [TJ Palanca](https://www.twitter.com/tjpalanca)
+      © Copyright 2009-2023 TJ Palanca
 
 format:
   html:
@@ -36,13 +29,12 @@ format:
       - theme/theme.scss
     include-in-header: 
       - theme/theme.htm
-      - theme/mailchimp.htm
       - theme/analytics.htm
     citations-hover: true
     footnotes-hover: true
     link-external-icon: true 
     link-external-newwindow: true
-    link-external-filter: ^(?:http:|https:)\/\/.*(tjpalanca\.com|tjp\.app)\/.*$
+    link-external-filter: ^(?:http:|https:)\/\/.*(tjpalanca\.com|tjpalanca\.dev)\/.*$
     smooth-scroll: false
     freeze: true
     title-block-banner: false

@@ -6,9 +6,8 @@ format:
     freeze: true
     include-in-header:
     - theme/theme.htm
-    - theme/mailchimp.htm
     - theme/analytics.htm
-    link-external-filter: ^(?:http:|https:)\/\/.*(tjpalanca\.com|tjp\.app)\/.*$
+    link-external-filter: ^(?:http:|https:)\/\/.*(tjpalanca\.com|tjpalanca\.dev)\/.*$
     link-external-icon: true
     link-external-newwindow: true
     smooth-scroll: false
@@ -22,7 +21,7 @@ metadata-files:
 project:
   preview:
     browser: false
-    host: 0.0.0.0
+    host: 127.0.0.1
     port: 8888
   type: website
 website:
@@ -39,7 +38,7 @@ website:
     image-height: 1200
     image-width: 1800
   page-footer:
-    center: "\xA9 Copyright 2009-2022 [TJ Palanca](https://www.twitter.com/tjpalanca)."
+    center: "\xA9 Copyright 2009-2023 TJ Palanca"
   page-navigation: true
   reader-mode: false
   repo-actions:
@@ -52,12 +51,5 @@ website:
     limit: 20
     location: navbar
     type: overlay
-  site-url: https://tjpalanca.com/tjutils-py
+  site-url: https://github.tjpalanca.com/tjutils-py
   title: tjutils
-  twitter-card:
-    creator: '@tjpalanca'
-    image: theme/logo/logo-banner.png
-    image-alt: TJ Palanca Logo
-    image-height: 1200
-    image-width: 1800
-    site: '@tjpalanca'
