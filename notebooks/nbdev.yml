@@ -3,7 +3,7 @@ project:
 
 website:
   title: "tjutils"
-  site-url: "https://tjpalanca.com/tjutils-py"
+  site-url: "https://github.tjpalanca.com/tjutils-py"
   description: "Python Utilities for TJ P"
   repo-branch: master
   repo-url: "https://github.com/tjpalanca/tjutils-py.git"
